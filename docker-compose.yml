@@ -1,0 +1,11 @@
+
+version: '3.8'
+services:
+
+  hulc2:
+    image: lumeny/hulc2:latest
+    container_name: hulc2
+    volumes:
+      - ./:/repo
+      - ../:/llm
+    restart: unless-stopped
