@@ -5,7 +5,18 @@ services:
   hulc2:
     image: lumeny/hulc2:latest
     container_name: hulc2
+    command: /bin/bash
+    tty: true
+    user: "mambauser:mambauser"
     volumes:
-      - ./:/repo
-      - ../:/llm
+      - .:/repo
+      - ..:/llm
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # count: 1
+              capabilities: [gpu]
+              device_ids: ['0']
     restart: unless-stopped
