@@ -7,7 +7,7 @@ services:
     container_name: hulc2
     command: /bin/bash
     tty: true
-    user: "mambauser:mambauser"
+    user: "root:root"
     volumes:
       - .:/repo
       - ..:/llm
