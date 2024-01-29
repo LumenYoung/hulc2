@@ -163,3 +163,6 @@ __pycache__/
 .vscode/
 *.egg-info/
 dataset/task_D_D.zip
+dataset/task_D_D/training
+dataset/task_D_D/validation/.hydra
+dataset/task_D_D/validation
